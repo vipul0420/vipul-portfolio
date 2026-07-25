@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --canvas: #050505;
+  --surface: #121212;
+  --surface-elevated: #1a1a1a;
+  --ink: #e8e8e8;
+  --ink-deep: #ffffff;
+  --muted: #8a8a8a;
+  --accent: #ffffff;
+  --accent-soft: #d4d4d4;
+  --label: #a3a3a3;
+  --glow: #6b7cff;
+  --line: #2a2a2a;
+  --radius-pill: 100px;
+  --radius-card: 28px;
+  --radius-phone: 40px;
+
+  /* Aliases so existing class names keep working on dark theme */
+  --olive: var(--accent);
+  --olive-soft: var(--accent-soft);
+  --brown: var(--label);
+  --plum: #8b7cff;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-ink: var(--ink);
+  --color-ink-deep: var(--ink-deep);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-label: var(--label);
+  --color-glow: var(--glow);
+  --color-olive: var(--olive);
+  --color-olive-soft: var(--olive-soft);
+  --color-brown: var(--brown);
+  --color-plum: var(--plum);
+  --color-line: var(--line);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-playfair);
+  --radius-pill: var(--radius-pill);
+  --radius-card: var(--radius-card);
+  --radius-phone: var(--radius-phone);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--glow) 45%, transparent);
+  color: var(--ink-deep);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+section[id] {
+  scroll-margin-top: 5.5rem;
 }

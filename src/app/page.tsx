@@ -1,7 +1,27 @@
+import { Footer } from "@/components/Footer";
+import { Nav } from "@/components/Nav";
+import { About } from "@/components/sections/About";
+import { Contact } from "@/components/sections/Contact";
+import { Education } from "@/components/sections/Education";
+import { Experience } from "@/components/sections/Experience";
+import { Hero } from "@/components/sections/Hero";
+import { Projects } from "@/components/sections/Projects";
+import { Skills } from "@/components/sections/Skills";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-4xl font-semibold tracking-tight">Hello World</h1>
-    </main>
+    <>
+      <Nav />
+      <main className="flex-1">
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Education />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
