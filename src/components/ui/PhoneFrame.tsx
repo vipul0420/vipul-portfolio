@@ -39,7 +39,7 @@ export function PhoneFrame({
                 <div className="h-2 w-full rounded-full bg-ink/15" />
                 <div className="h-2 w-4/5 rounded-full bg-ink/15" />
               </div>
-              <p className="font-display text-lg leading-tight text-ink-deep">
+              <p className="font-sans text-lg font-semibold leading-tight text-ink-deep">
                 {title}
               </p>
               <p className="mt-1 text-[10px] tracking-wide text-muted uppercase">

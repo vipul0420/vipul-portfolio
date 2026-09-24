@@ -18,7 +18,9 @@ export function SectionHeading({
       </p>
       <h2 className="text-4xl leading-[1.05] tracking-tight text-ink-deep sm:text-5xl md:text-6xl">
         <span className="block font-display italic">{title[0]}</span>
-        <span className="block font-sans font-semibold">{title[1]}</span>
+        <span className="block font-sans font-semibold tracking-tight">
+          {title[1]}
+        </span>
       </h2>
       {description ? (
         <p className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">

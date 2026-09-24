@@ -5,10 +5,14 @@ import { ArrowRight, MapPin } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { site } from "@/data/content";
 
-const HeroScene = dynamic(
-  () => import("@/components/HeroScene").then((mod) => mod.HeroScene),
-  { ssr: false },
-);
+const HeroPhone3D = dynamic(() => import("@/components/HeroPhone3D"), {
+  ssr: false,
+  loading: () => (
+    <div className="h-full w-full" aria-hidden>
+      <div className="pointer-events-none absolute inset-[12%] rounded-full bg-[radial-gradient(circle_at_center,rgba(107,124,255,0.18),transparent_68%)] blur-2xl" />
+    </div>
+  ),
+});
 
 export function Hero() {
   const firstName = site.name.split(" ")[0];
@@ -17,18 +21,8 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative isolate min-h-[min(92vh,920px)] overflow-hidden px-5 pb-16 pt-8 md:px-8 md:pb-24 md:pt-12"
+      className="relative min-h-[min(92vh,920px)] overflow-hidden px-5 pb-16 pt-8 md:px-8 md:pb-24 md:pt-12"
     >
-      {/* Soft glow orbs like Agenciy */}
-      <div
-        className="pointer-events-none absolute left-1/2 top-1/3 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(107,124,255,0.22),transparent_68%)] blur-2xl"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute right-[8%] top-[18%] h-[280px] w-[280px] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.12),transparent_70%)] blur-3xl"
-        aria-hidden
-      />
-
       <div className="relative mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-6">
         <div className="relative z-10">
           <Reveal>
@@ -49,7 +43,9 @@ export function Hero() {
 
           <Reveal delay={0.05}>
             <h1 className="max-w-xl text-5xl leading-[0.95] tracking-tight text-ink-deep sm:text-6xl md:text-7xl lg:text-[5.5rem]">
-              <span className="block font-sans font-semibold">{firstName},</span>
+              <span className="block font-sans font-semibold">
+                {firstName},
+              </span>
               <span className="mt-1 block font-display text-[1.08em] italic">
                 {lastName}
               </span>
@@ -77,6 +73,7 @@ export function Hero() {
               </a>
               <a
                 href={site.resume}
+                download="Vipul-Sharma-Resume.pdf"
                 className="inline-flex items-center gap-2 rounded-[var(--radius-pill)] border border-line bg-surface/60 px-6 py-3.5 text-sm font-medium text-ink transition-colors hover:border-ink/30 hover:bg-surface"
               >
                 Download Resume
@@ -90,19 +87,15 @@ export function Hero() {
                 I build
               </p>
               <p className="mt-2 max-w-sm text-sm leading-relaxed text-ink">
-                Secure React Native apps · Campus identity systems · Offline-first
-                wallets
+                Secure React Native apps · Campus identity systems ·
+                Offline-first wallets
               </p>
             </div>
           </Reveal>
         </div>
 
-        <div className="relative z-0 mx-auto aspect-square w-full max-w-[560px] lg:max-w-none">
-          <HeroScene />
-          <div
-            className="pointer-events-none absolute inset-x-[12%] bottom-[8%] h-24 rounded-[100%] bg-black/50 blur-2xl"
-            aria-hidden
-          />
+        <div className="relative z-0 mx-auto aspect-[4/5] w-full max-w-[420px] sm:max-w-[460px] lg:max-w-none lg:aspect-square">
+          <HeroPhone3D />
         </div>
       </div>
 

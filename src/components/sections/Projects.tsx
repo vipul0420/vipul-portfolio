@@ -23,7 +23,7 @@ export function Projects() {
           <SectionHeading
             eyebrow="Projects"
             title={["Apps in", "production"]}
-            description="Identity, verification, credential wallets, and family products — built for real users at campus and consumer scale."
+            description="Identity, verification, credential wallets, weather and maps, and family products — built for real users at campus and consumer scale."
           />
         </Reveal>
 
@@ -58,7 +58,7 @@ export function Projects() {
                     </span>
                   </div>
 
-                  <h3 className="mt-3 font-display text-3xl text-ink-deep md:text-4xl">
+                  <h3 className="mt-3 font-sans text-3xl font-semibold text-ink-deep md:text-4xl">
                     {project.name}
                   </h3>
                   <p className="mt-2 text-lg text-ink">{project.tagline}</p>

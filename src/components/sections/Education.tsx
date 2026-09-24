@@ -20,7 +20,7 @@ export function Education() {
                 <p className="font-mono text-xs text-muted">
                   /{String(index + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mt-3 font-display text-2xl text-ink-deep md:text-3xl">
+                <h3 className="mt-3 font-sans text-2xl font-semibold text-ink-deep md:text-3xl">
                   {item.title}
                 </h3>
                 <p className="mt-2 text-base text-ink">{item.school}</p>

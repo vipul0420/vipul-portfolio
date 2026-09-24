@@ -36,7 +36,7 @@ export function Nav() {
           href="#hero"
           className="font-sans text-lg font-medium tracking-tight text-ink-deep lowercase"
         >
-          {site.name.split(" ")[0].toLowerCase()}
+          {/* {site.name.split(" ")[0].toLowerCase()} */}
         </a>
 
         <ul className="hidden items-center gap-1 rounded-[var(--radius-pill)] border border-line bg-surface/70 px-2 py-1.5 backdrop-blur-md md:flex">
@@ -55,6 +55,7 @@ export function Nav() {
         <div className="hidden items-center gap-3 md:flex">
           <a
             href={site.resume}
+            download="Vipul-Sharma-Resume.pdf"
             className="rounded-[var(--radius-pill)] border border-line px-4 py-2 text-sm text-muted transition-colors hover:border-ink/30 hover:text-ink-deep"
           >
             Resume
@@ -101,6 +102,7 @@ export function Nav() {
           <div className="mt-6 flex flex-col gap-3">
             <a
               href={site.resume}
+              download="Vipul-Sharma-Resume.pdf"
               className="rounded-[var(--radius-pill)] border border-line px-4 py-3 text-center text-sm"
               onClick={() => setOpen(false)}
             >

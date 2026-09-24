@@ -32,7 +32,7 @@ export function Experience() {
                   <article className="rounded-[var(--radius-card)] border border-line bg-surface p-6 md:p-8">
                     <div className="flex flex-wrap items-start justify-between gap-3">
                       <div>
-                        <h3 className="font-display text-2xl text-ink-deep md:text-3xl">
+                        <h3 className="font-sans text-2xl font-semibold text-ink-deep md:text-3xl">
                           {role.title}
                         </h3>
                         <p className="mt-1 text-base text-ink">

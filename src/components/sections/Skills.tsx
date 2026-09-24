@@ -19,7 +19,7 @@ export function Skills() {
             <Reveal key={group.id} delay={index * 0.06}>
               <article className="h-full rounded-[var(--radius-card)] border border-line bg-surface p-6 md:p-7">
                 <p className="font-mono text-xs text-muted">/{group.id}</p>
-                <h3 className="mt-3 font-display text-2xl text-ink-deep">
+                <h3 className="mt-3 font-sans text-2xl font-semibold text-ink-deep">
                   {group.title}
                 </h3>
                 <ul className="mt-5 flex flex-wrap gap-2">
