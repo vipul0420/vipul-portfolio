@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     images: [
       {
-        url: "/images/iitk-app.png",
+        url: "/images/iitk-app.webp",
         width: 543,
         height: 900,
         alt: `${site.name} — React Native portfolio`,
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${site.name} — ${site.role}`,
     description: site.pitch,
-    images: ["/images/iitk-app.png"],
+    images: ["/images/iitk-app.webp"],
   },
   robots: {
     index: true,

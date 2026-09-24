@@ -2,10 +2,10 @@
 
 Project images live in `public/images/` and are referenced from `src/data/content.ts`:
 
-- `iitk-app.png`
-- `iitk-verifier.png`
-- `c3iwallet.png`
-- `weather-1.png`
-- `neemo.png`
+- `iitk-app.webp`
+- `iitk-verifier.webp`
+- `c3iwallet.webp`
+- `weather-1.webp`
+- `neemo.webp`
 
 Phone frames fall back to placeholders if an image fails to load.

@@ -77,7 +77,7 @@ export const projects = [
       "QR Scanning",
       "Sentry.io",
     ],
-    image: "/images/iitk-app.png",
+    image: "/images/iitk-app.webp",
   },
   {
     slug: "iitk-access",
@@ -92,7 +92,7 @@ export const projects = [
       "BLE scanner device support for access hardware",
     ],
     stack: ["React Native", "Expo", "QR Verification", "BLE", "Offline-first"],
-    image: "/images/iitk-verifier.png",
+    image: "/images/iitk-verifier.webp",
   },
   {
     slug: "c3ihub-wallet",
@@ -114,7 +114,7 @@ export const projects = [
       "SSL Pinning",
       "Encryption",
     ],
-    image: "/images/c3iwallet.png",
+    image: "/images/c3iwallet.webp",
   },
   {
     slug: "weatherly",
@@ -139,7 +139,7 @@ export const projects = [
       "Expo SQLite",
       "Reanimated",
     ],
-    image: "/images/weather-1.png",
+    image: "/images/weather-1.webp",
   },
   {
     slug: "neemo",
@@ -154,7 +154,7 @@ export const projects = [
       "Designed for long-distance family bonding",
     ],
     stack: ["React Native", "Redux", "Media"],
-    image: "/images/neemo.png",
+    image: "/images/neemo.webp",
   },
 ] as const;
 
