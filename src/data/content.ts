@@ -1,10 +1,10 @@
 export const site = {
   name: "Vipul Sharma",
-  role: "React Native Developer",
+  role: "Mobile Engineer — React Native",
   pitch:
-    "React Native Developer with 3+ years building secure, cross-platform mobile apps, plus 6 months of React.js web development. Delivered projects for IIT Kanpur and DigiMantra Labs.",
+    "Mobile Engineer with 3+ years of experience building secure, scalable, cross-platform applications with React Native, TypeScript, and Expo. Experienced in offline-first architecture, performance optimization, API integrations, and production apps serving thousands of users.",
   availability:
-    "Open to remote freelance, part-time (10–20 hrs/week), or contract React Native work, flexible across time zones.",
+    "Open to remote freelance, part-time (10–20 hrs/week), or contract React Native opportunities across time zones.",
   location: "Solan, Himachal Pradesh, India",
   email: "sharmavipul99999@gmail.com",
   phone: "+91 80917 88672",
@@ -35,7 +35,7 @@ export const experience = [
     location: "Kanpur, India",
     period: "Oct 2024 – Present",
     bullets: [
-      "Develops secure, cross-platform mobile apps using React Native, JavaScript, TypeScript, Expo for enterprise-grade solutions",
+      "Developing secure, cross-platform mobile apps using React Native, JavaScript, TypeScript, and Expo for enterprise-grade solutions",
       "Led IITK App & Verifier: Expo Secure Store, biometric auth, DigiLocker API, QR scanning, Sentry.io",
       "Optimized performance — 20% reduction in load times for critical features",
       "Collaborated with designers, backend devs, and IIT Kanpur stakeholders on responsive UI + API integrations",
@@ -77,7 +77,7 @@ export const projects = [
       "QR Scanning",
       "Sentry.io",
     ],
-    image: "/images/iitk-app.webp",
+    image: "/images/iitk-app.png",
   },
   {
     slug: "iitk-access",
@@ -92,7 +92,7 @@ export const projects = [
       "BLE scanner device support for access hardware",
     ],
     stack: ["React Native", "Expo", "QR Verification", "BLE", "Offline-first"],
-    image: "/images/iitk-verifier.webp",
+    image: "/images/iitk-verifier.png",
   },
   {
     slug: "c3ihub-wallet",
@@ -114,7 +114,7 @@ export const projects = [
       "SSL Pinning",
       "Encryption",
     ],
-    image: "/images/c3iwallet.webp",
+    image: "/images/c3iwallet.png",
   },
   {
     slug: "weatherly",
@@ -139,7 +139,7 @@ export const projects = [
       "Expo SQLite",
       "Reanimated",
     ],
-    image: "/images/weather-1.webp",
+    image: "/images/weather-1.png",
   },
   {
     slug: "neemo",
@@ -154,7 +154,7 @@ export const projects = [
       "Designed for long-distance family bonding",
     ],
     stack: ["React Native", "Redux", "Media"],
-    image: "/images/neemo.webp",
+    image: "/images/neemo.png",
   },
 ] as const;
 

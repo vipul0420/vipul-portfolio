@@ -1,10 +1,11 @@
 # Project screenshots
 
-Drop PNGs here using these filenames (already referenced in `src/data/content.ts`):
+Project images live in `public/images/` and are referenced from `src/data/content.ts`:
 
 - `iitk-app.png`
-- `iitk-access.png`
-- `c3ihub-wallet.png`
+- `iitk-verifier.png`
+- `c3iwallet.png`
+- `weather-1.png`
 - `neemo.png`
 
-Phone frames fall back to placeholders until these files exist.
+Phone frames fall back to placeholders if an image fails to load.

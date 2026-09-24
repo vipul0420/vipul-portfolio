@@ -59,20 +59,17 @@ export default function HeroPhone3D({ className = "" }: HeroPhone3DProps) {
   const [hoverPaused, setHoverPaused] = useState(false);
   const [clickPauseKey, setClickPauseKey] = useState(0);
   const [inView, setInView] = useState(true);
-  const [isTouch, setIsTouch] = useState(false);
+  const [isTouch] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(hover: none), (pointer: coarse)").matches;
+  });
 
   const containerRef = useRef<HTMLDivElement>(null);
   const pointer = useRef<PointerState>({ x: 0, y: 0, active: false });
-  const isTouchRef = useRef(false);
+  const isTouchRef = useRef(isTouch);
 
   const clickPaused = clickPauseKey > 0;
   const autoPaused = !!reduceMotion || hoverPaused || clickPaused;
-
-  useEffect(() => {
-    const touch = window.matchMedia("(hover: none), (pointer: coarse)").matches;
-    setIsTouch(touch);
-    isTouchRef.current = touch;
-  }, []);
 
   useEffect(() => {
     const node = containerRef.current;
@@ -189,7 +186,7 @@ export default function HeroPhone3D({ className = "" }: HeroPhone3DProps) {
               aria-label={`Show ${SCENE_LABELS[id]}`}
               aria-current={active ? "true" : undefined}
               onClick={() => selectScene(id)}
-              className="flex h-6 items-center justify-center px-0.5"
+              className="flex h-11 min-w-11 items-center justify-center px-1"
             >
               <span
                 className={`block h-1 rounded-full transition-all duration-500 ${
@@ -408,6 +405,12 @@ function PhoneModel({
 }
 
 function ScreenPane({ children }: { children: ReactNode }) {
+  const reduceMotion = useReducedMotion();
+
+  if (reduceMotion) {
+    return <div className="absolute inset-0">{children}</div>;
+  }
+
   return (
     <motion.div
       className="absolute inset-0"

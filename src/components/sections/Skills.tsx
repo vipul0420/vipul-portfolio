@@ -14,7 +14,7 @@ export function Skills() {
           />
         </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2">
           {skills.map((group, index) => (
             <Reveal key={group.id} delay={index * 0.06}>
               <article className="h-full rounded-[var(--radius-card)] border border-line bg-surface p-6 md:p-7">

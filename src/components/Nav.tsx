@@ -22,6 +22,15 @@ export function Nav() {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
   return (
     <header
       className={`sticky top-0 z-50 transition-colors ${
@@ -36,7 +45,7 @@ export function Nav() {
           href="#hero"
           className="font-sans text-lg font-medium tracking-tight text-ink-deep lowercase"
         >
-          {/* {site.name.split(" ")[0].toLowerCase()} */}
+          {site.name.split(" ")[0].toLowerCase()}
         </a>
 
         <ul className="hidden items-center gap-1 rounded-[var(--radius-pill)] border border-line bg-surface/70 px-2 py-1.5 backdrop-blur-md md:flex">
